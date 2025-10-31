@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>FrogoCoin 🐸 — Bilingual Meme Coin | Laugh. Trade. Plant.</title>
+  <meta name="description" content="FrogoCoin — The greenest meme on the blockchain. Bilingual FR/EN landing page with transparent tokenomics and eco impact.">
+  <link rel="icon" href="assets/frogo.svg" type="image/svg+xml">
+  <meta property="og:title" content="FrogoCoin — The greenest meme on the blockchain">
+  <meta property="og:description" content="Laugh. Trade. Plant. Transparent tokenomics, DAO votes, and eco donations.">
+  <meta property="og:image" content="assets/frogo.svg">
+  <meta name="theme-color" content="#2c5e2e">
+  <style>
+    :root{
+      --bg:#f6fff7; --card:#ffffff; --text:#111; --muted:#5b5b5b; --accent:#2c5e2e; --accent-2:#a8e6cf;
+      --shadow:0 10px 30px rgba(20,20,40,.08);
+    }
+    :root.dark{
+      --bg:#0f1512; --card:#111a16; --text:#f3f7f4; --muted:#aab5ae; --accent:#86efac; --accent-2:#123d2a;
+      --shadow:0 10px 30px rgba(0,0,0,.4);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg); color:var(--text);}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    header.hero{position:sticky;top:0;z-index:20;background:var(--accent-2);box-shadow:var(--shadow)}
+    .hero-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800}
+    .brand img{width:34px;height:34px}
+    .cta{background:var(--accent);color:#0b2015;border:none;padding:10px 16px;border-radius:12px;font-weight:700;text-decoration:none;display:inline-block}
+    .toolbar{display:flex;align-items:center;gap:8px}
+    .btn{border:1px solid transparent;background:var(--card);color:var(--text);padding:8px 10px;border-radius:10px;cursor:pointer}
+    .btn:hover{box-shadow:var(--shadow)}
+    .hero-splash{padding:46px 0 28px;text-align:center;background:linear-gradient(180deg,var(--accent-2),transparent)}
+    .hero-splash h1{font-size:2.2rem;margin:.2rem 0 .6rem}
+    .hero-splash p{margin:0 auto 16px;max-width:760px;opacity:.9}
+    main{padding:24px 0 60px}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .card{background:var(--card);border-radius:16px;padding:22px;box-shadow:var(--shadow)}
+    h2{margin-top:0}
+    .list{padding-left:1.1rem}
+    .pill{display:inline-flex;align-items:center;gap:8px;background:var(--accent-2);padding:6px 10px;border-radius:999px;font-weight:700}
+    .section{margin:26px 0}
+    .badge{font-size:.9rem;opacity:.9}
+    footer{padding:28px 0;text-align:center;color:var(--muted);}
+    .fade{animation:fade .6s ease both}
+    @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+    @media (max-width:860px){.grid{grid-template-columns:1fr} .hero-splash h1{font-size:1.6rem}}
+    details{background:var(--card);border-radius:14px;padding:14px 18px;box-shadow:var(--shadow);margin-bottom:12px}
+    summary{cursor:pointer;font-weight:700}
+    .num{font-variant-numeric: tabular-nums; font-weight:800}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container hero-inner">
+      <div class="brand">
+        <img src="assets/frogo.svg" alt="FrogoCoin logo" />
+        <span>FrogoCoin (FROGO)</span>
+      </div>
+      <div class="toolbar">
+        <button id="langButton" class="btn" aria-label="Switch language">EN</button>
+        <button id="themeButton" class="btn" aria-label="Toggle theme">🌙</button>
+        <a id="buyTop" class="cta" href="#buy">Buy</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="hero-splash">
+    <div class="container">
+      <p class="pill fade" id="tagline">Le mème le plus vert de la blockchain 🌍</p>
+      <h1 class="fade" id="title">🐸 FrogoCoin</h1>
+      <p class="fade" id="lead">À chaque palier de transactions, FrogoCoin finance un projet écologique choisi par la communauté.</p>
+      <a id="buy" class="cta fade" href="#buy">Acheter sur pump.fun</a>
+    </div>
+  </div>
+
+  <main class="container">
+    <section class="grid section">
+      <div class="card fade">
+        <h2 id="conceptTitle">💡 Concept</h2>
+        <p id="conceptText">
+          Mixer l'humour internet (mème coin) avec un impact réel : des micro-dons vers des projets environnementaux vérifiés, décidés par la DAO.
+          <br><strong id="motto">Rire. Trader. Planter.</strong>
+        </p>
+      </div>
+      <div class="card fade">
+        <h2 id="tokenomicsTitle">⚙️ Tokenomics</h2>
+        <ul id="tokenList" class="list">
+          <li>80% Communauté & Liquidité</li>
+          <li>10% Donations éco (verrouillées)</li>
+          <li>5% Équipe (vesting 6 mois)</li>
+          <li>5% Marketing & Partenaires</li>
+        </ul>
+        <p class="badge" id="supply">Total supply : <span class="num">1 000 000 000</span> FROGO</p>
+      </div>
+    </section>
+
+    <section class="grid section">
+      <div class="card fade">
+        <h2 id="engageTitle">🌱 Engagement</h2>
+        <p id="engageText">FrogoDAO vote chaque mois quel projet environnemental soutenir. Suivez le compteur <strong>Frogs Saved</strong> !</p>
+        <p class="badge"><span id="counter" class="num">0</span> Frogs Saved</p>
+      </div>
+      <div class="card fade">
+        <h2 id="launchTitle">📈 Lancement</h2>
+        <p id="launchText">Lancement sur pump.fun — Liquidity lock 12 mois minimum, audit en cours.</p>
+        <div class="badge">
+          <a id="whitepaper" href="#" target="_blank" rel="noopener">Whitepaper</a> ·
+          <a id="audit" href="#" target="_blank" rel="noopener">Audit</a> ·
+          <a id="contract" href="#" target="_blank" rel="noopener">Smart contract</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section fade">
+      <h2 id="faqTitle">❓ FAQ</h2>
+      <details>
+        <summary id="faq1q">Comment acheter FROGO ?</summary>
+        <p id="faq1a">Cliquez sur « Acheter sur pump.fun », connectez votre wallet, puis suivez les étapes. N’investissez que ce que vous pouvez perdre.</p>
+      </details>
+      <details>
+        <summary id="faq2q">Est-ce un conseil financier ?</summary>
+        <p id="faq2a">Non. FrogoCoin est un projet communautaire. Faites vos propres recherches (DYOR).</p>
+      </details>
+      <details>
+        <summary id="faq3q">Où voir l'impact écologique ?</summary>
+        <p id="faq3a">Les résultats sont publiés après chaque vote DAO (transaction de don + reçu de l’organisme).</p>
+      </details>
+    </section>
+  </main>
+
+  <footer id="footerText">
+    🐸 FrogoCoin © 2025 — Projet communautaire, non financier. N’investissez que ce que vous pouvez perdre.
+  </footer>
+
+  <script>
+    // --- Theme toggle ---
+    const themeButton = document.getElementById('themeButton');
+    const root = document.documentElement;
+    function applyTheme(t){ root.classList.toggle('dark', t==='dark'); themeButton.textContent = t==='dark' ? '☀️' : '🌙'; localStorage.setItem('frogo-theme', t); }
+    applyTheme(localStorage.getItem('frogo-theme') || 'light');
+    themeButton.addEventListener('click', ()=> applyTheme(root.classList.contains('dark') ? 'light' : 'dark'));
+
+    // --- I18n ---
+    const langButton = document.getElementById('langButton');
+    let lang = 'fr';
+    const T = {
+      fr: {
+        buyTop: "Acheter",
+        tagline: "Le mème le plus vert de la blockchain 🌍",
+        title: "🐸 FrogoCoin",
+        lead: "À chaque palier de transactions, FrogoCoin finance un projet écologique choisi par la communauté.",
+        buy: "Acheter sur pump.fun",
+        conceptTitle: "💡 Concept",
+        conceptText: "Mixer l'humour internet (mème coin) avec un impact réel : des micro-dons vers des projets environnementaux vérifiés, décidés par la DAO.",
+        motto: "Rire. Trader. Planter.",
+        tokenomicsTitle: "⚙️ Tokenomics",
+        tokenList: "<li>80% Communauté & Liquidité</li><li>10% Donations éco (verrouillées)</li><li>5% Équipe (vesting 6 mois)</li><li>5% Marketing & Partenaires</li>",
+        supply: "Total supply : <span class='num'>1 000 000 000</span> FROGO",
+        engageTitle: "🌱 Engagement",
+        engageText: "FrogoDAO vote chaque mois quel projet environnemental soutenir. Suivez le compteur <strong>Frogs Saved</strong> !",
+        launchTitle: "📈 Lancement",
+        launchText: "Lancement sur pump.fun — Liquidity lock 12 mois minimum, audit en cours.",
+        whitepaper: "Whitepaper",
+        audit: "Audit",
+        contract: "Smart contract",
+        faqTitle: "❓ FAQ",
+        faq1q: "Comment acheter FROGO ?",
+        faq1a: "Cliquez sur « Acheter sur pump.fun », connectez votre wallet, puis suivez les étapes. N’investissez que ce que vous pouvez perdre.",
+        faq2q: "Est-ce un conseil financier ?",
+        faq2a: "Non. FrogoCoin est un projet communautaire. Faites vos propres recherches (DYOR).",
+        faq3q: "Où voir l'impact écologique ?",
+        faq3a: "Les résultats sont publiés après chaque vote DAO (transaction de don + reçu de l’organisme).",
+        footer: "🐸 FrogoCoin © 2025 — Projet communautaire, non financier. N’investissez que ce que vous pouvez perdre."
+      },
+      en: {
+        buyTop: "Buy",
+        tagline: "The greenest meme on the blockchain 🌍",
+        title: "🐸 FrogoCoin",
+        lead: "At every transaction milestone, FrogoCoin funds an eco project chosen by the community.",
+        buy: "Buy on pump.fun",
+        conceptTitle: "💡 Concept",
+        conceptText: "Blend internet humor (meme coin) with real impact: micro-donations to verified environmental projects, decided by the DAO.",
+        motto: "Laugh. Trade. Plant.",
+        tokenomicsTitle: "⚙️ Tokenomics",
+        tokenList: "<li>80% Community & Liquidity</li><li>10% Eco donations (locked)</li><li>5% Team (6‑month vesting)</li><li>5% Marketing & Partners</li>",
+        supply: "Total supply: <span class='num'>1,000,000,000</span> FROGO",
+        engageTitle: "🌱 Commitment",
+        engageText: "FrogoDAO votes monthly on which environmental project to support. Track the <strong>Frogs Saved</strong> counter!",
+        launchTitle: "📈 Launch",
+        launchText: "Launch on pump.fun — 12‑month liquidity lock, audit in progress.",
+        whitepaper: "Whitepaper",
+        audit: "Audit",
+        contract: "Smart contract",
+        faqTitle: "❓ FAQ",
+        faq1q: "How do I buy FROGO?",
+        faq1a: "Click “Buy on pump.fun”, connect your wallet, then follow the steps. Only invest what you can afford to lose.",
+        faq2q: "Is this financial advice?",
+        faq2a: "No. FrogoCoin is a community project. Do your own research (DYOR).",
+        faq3q: "Where can I see the eco impact?",
+        faq3a: "Results are published after each DAO vote (donation transaction + receipt).",
+        footer: "🐸 FrogoCoin © 2025 — Community project, not financial advice. Only invest what you can afford to lose."
+      }
+    };
+    function setLang(l){
+      lang = l;
+      const t = T[lang];
+      document.getElementById('buyTop').textContent = t.buyTop;
+      document.getElementById('tagline').textContent = t.tagline;
+      document.getElementById('title').innerHTML = t.title;
+      document.getElementById('lead').textContent = t.lead;
+      document.getElementById('buy').textContent = t.buy;
+      document.getElementById('conceptTitle').textContent = t.conceptTitle;
+      document.getElementById('conceptText').textContent = t.conceptText;
+      document.getElementById('motto').textContent = t.motto;
+      document.getElementById('tokenomicsTitle').textContent = t.tokenomicsTitle;
+      document.getElementById('tokenList').innerHTML = t.tokenList;
+      document.getElementById('supply').innerHTML = t.supply;
+      document.getElementById('engageTitle').textContent = t.engageTitle;
+      document.getElementById('engageText').innerHTML = t.engageText;
+      document.getElementById('launchTitle').textContent = t.launchTitle;
+      document.getElementById('launchText').textContent = t.launchText;
+      document.getElementById('whitepaper').textContent = t.whitepaper;
+      document.getElementById('audit').textContent = t.audit;
+      document.getElementById('contract').textContent = t.contract;
+      document.getElementById('faqTitle').textContent = t.faqTitle;
+      document.getElementById('faq1q').textContent = t.faq1q;
+      document.getElementById('faq1a').textContent = t.faq1a;
+      document.getElementById('faq2q').textContent = t.faq2q;
+      document.getElementById('faq2a').textContent = t.faq2a;
+      document.getElementById('faq3q').textContent = t.faq3q;
+      document.getElementById('faq3a').innerHTML = t.faq3a;
+      document.getElementById('footerText').textContent = t.footer;
+      langButton.textContent = lang==='fr' ? 'EN' : 'FR';
+      localStorage.setItem('frogo-lang', lang);
+    }
+    langButton.addEventListener('click', ()=> setLang(lang==='fr' ? 'en' : 'fr'));
+    setLang(localStorage.getItem('frogo-lang') || 'fr');
+
+    // --- Simple fun counter (client-side demo) ---
+    const counter = document.getElementById('counter');
+    let n = 0;
+    function tick(){ n += Math.floor(Math.random()*3); counter.textContent = n.toLocaleString(lang==='fr'?'fr-FR':'en-US'); }
+    setInterval(tick, 1500);
+  </script>
+</body>
+</html>
